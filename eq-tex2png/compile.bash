@@ -1,10 +1,14 @@
 #!/bin/bash
-EQUATIONS_DIR="$1"
-EQUATIONS_DIR=${EQUATIONS_DIR%/}
+ARGUMENT="$1"
+
+ARGUMENT=${ARGUMENT%/}
+if [[ -d $ARGUMENT ]]; then
+	ARGUMENT="${ARGUMENT}/"
+fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-for fullfilename in "${EQUATIONS_DIR}/"*; do
+for fullfilename in $ARGUMENT*; do
 	if [[ -d $fullfilename ]]; then
 		echo "Skipping directory: $fullfilename"
 		continue
