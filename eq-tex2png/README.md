@@ -6,4 +6,12 @@ The utility converts Latex-snippets to PNG-images. It processes all the files in
 ```
 This creates the PNG-images in the directory where it is executed.
 
+## Note
+
+For conversion to work, it may be necessary to modify /etc/ImageMagick-6/policy.xml by commenting out the line
+```
+<policy domain="coder" rights="none" pattern="PDF" />
+```
+which can and should be undone afterwards as it is a security measure in general.
+
 Author: David J. Gonon
