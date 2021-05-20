@@ -4,7 +4,10 @@ The utility converts Latex-snippets to PNG-images. It processes all the files in
 ```
 . path/to/eq-tex2png/compile path/to/equations-directory
 ```
-This creates the PNG-images in the directory where it is executed.
+This creates the PNG-images in the directory where it is executed. Instead of a whole directory, one can also pass a single file as the argument, which will then be converted:
+```
+. path/to/eq-tex2png/compile path/to/equation.tex
+```
 
 ## Note
 
